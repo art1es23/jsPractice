@@ -4,13 +4,16 @@ import {
     modals,
     tabs,
     forms,
-    changeModalState
+    changeModalState,
+    timer,
+    images
 } from './modules/';
 
 window.addEventListener('DOMContentLoaded', () => {
     'use strict';
 
     let modalState = {};
+    let deadline = '2021-06-02';
 
     changeModalState(modalState);
     modals();
@@ -18,4 +21,6 @@ window.addEventListener('DOMContentLoaded', () => {
     tabs('.decoration_slider', '.no_click', '.decoration_content > div > div', 'after_click');
     tabs('.balcon_icons', '.balcon_icons_img', '.big_img > img', 'do_image_more', 'inline-block');
     forms(modalState);
+    timer('.container1', deadline);
+    images();
 });
